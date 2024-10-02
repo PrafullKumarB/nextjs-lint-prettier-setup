@@ -25,6 +25,8 @@ module.exports = {
   rules: {
     "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": "off",
+    "react/jsx-indent": ["error", 2],  // Control JSX indentation
+    "react/jsx-indent-props": ["error", 2],  // Control props indentation
     "react/jsx-filename-extension": [
       1,
       {

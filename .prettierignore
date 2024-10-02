@@ -5,6 +5,7 @@
  .eslintrc
  .gitignore
  .package-lock.json
+ .editorconfig
  *.log
  .package.json
  README.md

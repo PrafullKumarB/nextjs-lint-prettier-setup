@@ -25,7 +25,8 @@ module.exports = {
   rules: {
     "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": "off",
-    "no-multiple-empty-lines":"error",
+    "no-multiple-empty-lines" :"error",
+    "linebreak-style": ["error", "unix"],
     "react/jsx-filename-extension": [
       1,
       {

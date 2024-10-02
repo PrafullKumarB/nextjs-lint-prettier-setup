@@ -2,7 +2,6 @@
  .next
  .husky
  .prettierignore
- .eslintrc
  .gitignore
  .package-lock.json
  .editorconfig

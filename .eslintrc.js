@@ -24,7 +24,7 @@ module.exports = {
   },
   rules: {
     "react/jsx-props-no-spreading": "off",
-    "react/react-in-jsx-scope":"off",
+    "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [
       1,
       {

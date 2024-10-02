@@ -1,57 +1,37 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
+chmod +x .husky/pre-commit
 
-echo '🏗️👷 Running checks before committing...'
+echo '🏗️👷 Styling, testing and building your project before committing'
+
 
 # Check Prettier standards
-if ! npm run check-format; then
-    echo '🤢 Prettier Check Failed. Please fix formatting issues.'
-    exit 1
-fi
+npm run check-format ||
+(
+    echo '🤢🤮🤢🤮 Its F**KING RAW - Your styling looks disgusting. 🤢🤮🤢🤮
+            Prettier Check Failed. Run npm run format, add changes and try commit again.';
+    false;
+)
 
 # Check ESLint Standards
-if ! npm run check-lint; then
-    echo '😤 ESLint Check Failed. Please fix linting issues.'
-    exit 1
-fi
+npm run check-lint ||
+(
+        echo '😤🏀👋😤 Get that weak s**t out of here! 😤🏀👋😤 
+                ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
+        false; 
+)
 
-# If everything passes, we can commit
-echo '✅ All checks passed. Proceeding to commit...'
+# If everything passes... Now we can commit
+echo '🤔🤔🤔🤔... Alright... Code looks good to me... 🤔🤔🤔🤔'
 
-# #!/bin/sh
-# . "$(dirname "$0")/_/husky.sh"
-# chmod +x .husky/pre-commit
+echo '👷🔨👷🔨... Trying to create production build... 👷🔨👷🔨'
 
-# echo '🏗️👷 Styling, testing and building your project before committing'
-
-
-# # Check Prettier standards
-# npm run check-format ||
-# (
-#     echo '🤢🤮🤢🤮 Its F**KING RAW - Your styling looks disgusting. 🤢🤮🤢🤮
-#             Prettier Check Failed. Run npm run format, add changes and try commit again.';
-#     false;
-# )
-
-# # Check ESLint Standards
-# npm run check-lint ||
-# (
-#         echo '😤🏀👋😤 Get that weak s**t out of here! 😤🏀👋😤 
-#                 ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
-#         false; 
-# )
-
-# # If everything passes... Now we can commit
-# echo '🤔🤔🤔🤔... Alright... Code looks good to me... 🤔🤔🤔🤔'
-
-# echo '👷🔨👷🔨... Trying to create production build... 👷🔨👷🔨'
-
-# npm run build ||
-# (
-#     echo '❌👷🔨❌ Better call Bob... Because your build failed ❌👷🔨❌
-#             Next build failed: View the errors above to see why. 
-#     '
-#     false;
-# )
-# # If everything passes... Now we can commit
-# echo '✅✅✅✅ You win this time... I am committing this now. ✅✅✅✅'
+npm run build ||
+(
+    echo '❌👷🔨❌ Better call Bob... Because your build failed ❌👷🔨❌
+            Next build failed: View the errors above to see why. 
+    '
+    false;
+)
+# If everything passes... Now we can commit
+echo '✅✅✅✅ You win this time... I am committing this now. ✅✅✅✅'

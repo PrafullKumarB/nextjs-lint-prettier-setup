@@ -7,7 +7,7 @@ echo '🏗️👷 Styling, testing and building your project before committing'
 echo '🔍 Formatting code with Prettier...'
 npx prettier --write . || {
     echo '🤢 Prettier formatting failed. Please fix formatting issues before committing.'
-    false
+    exit 1
 }
 
 # Check ESLint Standards including indentation
@@ -21,18 +21,16 @@ fi
 # Check Prettier standards
 npm run check-format ||
 (
-    echo '🤢🤮🤢🤮 Its F**KING RAW - Your styling looks disgusting. 🤢🤮🤢🤮
-            Prettier Check Failed. Run npm run format, add changes and try commit again.';
+    echo '🤢🤮🤢🤮  Prettier Check Failed. Run npm run format, add changes and try commit again. 🤢🤮🤢🤮';
     false;
 )
 
-# Check ESLint Standards
-npm run check-lint ||
-(
-        echo '😤🏀👋😤 Get that weak s**t out of here! 😤🏀👋😤 
-                ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
-        false; 
-)
+# # Check ESLint Standards
+# npm run check-lint ||
+# (
+#         echo '😤🏀👋😤 ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.😤🏀👋😤'
+#         false; 
+# )
 
 # If everything passes... Now we can commit
 echo '🤔🤔🤔🤔... Alright... Code looks good to me... 🤔🤔🤔🤔'
@@ -41,9 +39,7 @@ echo '👷🔨👷🔨... Trying to create production build... 👷🔨👷🔨'
 
 npm run build ||
 (
-    echo '❌👷🔨❌ Better call Bob... Because your build failed ❌👷🔨❌
-            Next build failed: View the errors above to see why. 
-    '
+    echo '❌👷🔨❌  Next build failed: View the errors above to see why.❌👷🔨❌'
     false;
 )
 # If everything passes... Now we can commit

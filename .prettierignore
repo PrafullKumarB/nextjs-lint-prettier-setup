@@ -4,16 +4,5 @@
  .prettierignore
  .gitignore
  .package-lock.json
- .editorconfig
- *.log
  .package.json
  README.md
-
-# Ignore everything recursively
-*
-
-# But not the .ts files
-!*.ts
-
-# Check subdirectories too
-!*/

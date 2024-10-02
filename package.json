@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
+    "prettier:check": "prettier --check .",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "check-lint": "eslint . --ext js",

@@ -1,42 +1,42 @@
 {
-  "name": "boiler-plate-nextjs-working",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "prepare": "husky install",
-    "format": "prettier --write .",
-    "check-format": "prettier --check .",
-    "check-lint": "eslint . --ext js",
-    "test-all": "npm run check-format && npm run check-lint && npm run build"
-  },
-  "lint-staged": {
-    "*.js": "prettier --write",
-    "*.ts": "prettier --write",
-    "*.tsx": "prettier --write",
-    "*.css": "prettier --write",
-    "*.json": "prettier --write",
-    "*.md": "prettier --write"
-  },
-  "dependencies": {
-    "next": "14.2.14",
-    "react": "^18",
-    "react-dom": "^18"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8.57.1",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-next": "14.2.14",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "prettier": "^3.3.3",
-    "typescript": "^5",
-    "husky": "^8.0.0"
-  }
+    "name": "boiler-plate-nextjs-working",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "prepare": "husky install",
+        "format": "prettier --write .",
+        "check-format": "prettier --check .",
+        "check-lint": "eslint . --ext js",
+        "test-all": "npm run check-format && npm run check-lint && npm run build"
+    },
+    "lint-staged": {
+        "*.js": "prettier --write",
+        "*.ts": "prettier --write",
+        "*.tsx": "prettier --write",
+        "*.css": "prettier --write",
+        "*.json": "prettier --write",
+        "*.md": "prettier --write"
+    },
+    "dependencies": {
+        "next": "14.2.14",
+        "react": "^18",
+        "react-dom": "^18"
+    },
+    "devDependencies": {
+        "@types/node": "^20",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "eslint": "^8.57.1",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-next": "14.2.14",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "prettier": "^3.3.3",
+        "typescript": "^5",
+        "husky": "^8.0.0"
+    }
 }

@@ -1,0 +1,19 @@
+ node_modules
+ .next
+ .husky
+ .prettierignore
+ .eslintrc
+ .gitignore
+ .package-lock.json
+ *.log
+ .package.json
+ README.md
+
+# Ignore everything recursively
+*
+
+# But not the .ts files
+!*.ts
+
+# Check subdirectories too
+!*/

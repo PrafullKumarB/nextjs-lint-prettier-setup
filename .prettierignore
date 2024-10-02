@@ -7,8 +7,8 @@
  .package.json
  README.md
 
-# Ignore everything recursively
-*
+# # Ignore everything recursively
+# *
 
 # But not the .ts files
 !*.ts
